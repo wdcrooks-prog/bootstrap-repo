@@ -1,0 +1,197 @@
+/* Author: Jada Morrison, Jordan Banks, Dawn Graves, William Crooks
+File Name: styles.css
+Date: 11/21/2025
+Optimized for Bootstrap 5 integration
+*/
+
+/* --- CSS Variables for Brand Colors --- */
+:root {
+    --brand-blue: #002D74;
+    --brand-gold: #FDB827;
+    --brand-gray: #d8d8d8;
+    --brand-bg: #e7e6e4;
+}
+
+/* --- Base Typography & Body --- */
+/* Note: Removed Global Reset to allow Bootstrap Reboot to work */
+
+body {
+    background-color: var(--brand-bg);
+    font-family: 'Lora', serif;
+    color: #000;
+    /* Text alignment center removed globally so it doesn't break forms/articles. 
+       Use .text-center class in HTML instead. */
+}
+
+/* Headings - Scoped to avoid breaking cards/modals */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', sans-serif;
+}
+
+/* Use this class on specific headers you want styled with the blue background */
+.brand-header {
+    background-color: var(--brand-blue);
+    color: var(--brand-gold);
+    padding: 15px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+/* --- Content Styling --- */
+
+/* Replaces your global 'p' tag style. Add class="content-box" to paragraphs you want styled. */
+.content-box {
+    background-color: var(--brand-gray);
+    padding: 15px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+/* --- Images & Video --- */
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block; 
+}
+
+/* --- Hero Section --- */
+.hero-image {
+    background-image: linear-gradient(#fef5e7);
+    background-position: center;
+    padding: 0 25%;
+}
+
+/* --- Navigation --- */
+/* CRITICAL: Removed custom .mobile, .tab-desk, and nav styling.
+   Bootstrap Navbar classes (.navbar, .navbar-expand-sm, .collapse) 
+   now handle all showing/hiding and layout automatically.
+*/
+
+/* Customizing Bootstrap Navbar Colors */
+.navbar {
+    background-color: var(--brand-blue) !important;
+}
+
+.navbar-brand, .nav-link {
+    color: var(--brand-gold) !important;
+    font-family: 'Merriweather', sans-serif;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #fff !important; /* White on hover */
+}
+
+.dropdown-menu {
+    background-color: var(--brand-blue);
+}
+
+.dropdown-item {
+    color: var(--brand-gold);
+}
+
+.dropdown-item:hover {
+    background-color: var(--brand-gold);
+    color: var(--brand-blue);
+}
+
+/* --- Main Content --- */
+main {
+    /* Kept your brand styling but let Bootstrap handle the padding/margins via utility classes */
+    background-color: var(--brand-gold); 
+    color: var(--brand-blue);
+    font-family: 'Merriweather', sans-serif;
+    border-radius: 5px; /* Added soft rounded corners */
+}
+
+main p {
+    font-size: 1.25em;
+}
+
+/* --- Custom Article Styling --- */
+.focus-article, .cve-item {
+    background-color: var(--brand-gray);
+    padding: 15px;
+    margin-bottom: 15px;    
+    border-radius: 3px;
+    text-align: left;
+    color: #000;
+}
+
+.article-card {
+    background-color: var(--brand-gray);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.article-card:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+article img {
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+/* --- Utility / functional --- */
+iframe {        
+    aspect-ratio: 16 / 9; 
+    width: 100%;
+    border: 0;
+    display: block;
+}
+
+/* Fraud Ticker Specifics */
+.fraud_ticker {
+    width: 100%; 
+    height: 60px;
+    border: 0;
+    display: block;
+    margin-bottom: 2%; 
+    padding: 0; 
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--brand-blue);
+    color: var(--brand-gold);
+}
+
+footer p {
+    margin-bottom: 0; /* Bootstrap creates margin, this removes it for footer */
+}
+
+footer a {
+    color: var(--brand-gold);
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Social Icons */
+.social img {
+    width: 40px; /* Fixed width is safer than % for icons */
+    height: 40px;
+    margin: 10px;
+    display: inline-block;
+}
+
+/* --- Media Queries --- */
+/* Bootstrap handles the grid breakpoints automatically. 
+   Only add custom overrides here if absolutely necessary.
+*/
+
+@media print {
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+    .navbar, .hero {
+        display: none;
+    }
+}

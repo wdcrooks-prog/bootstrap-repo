@@ -1,0 +1,246 @@
+/*
+Author: Jada Morrison, Jordan Banks, Dawn Graves, William Crooks
+File Name: styles.css
+Date: 10/30/2025
+*/
+
+/* --- VARIABLES / PALETTE --- */
+/* A&T Aggie Blue: #002D74 */
+/* A&T Aggie Gold/Orange: #FDB827 */
+
+
+/* CSS Reset */
+body, header, main, footer, img, ul, h1, h3, aside, figure, figcaption, div, section, a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rules for body and images */
+body {
+    background-color: #e7e6e4;
+    font-family: 'Lora', serif; /* Default text font */
+    color: #000;
+}
+
+#wrapper {
+    /* Ensures content is centered on large screens and full-width on mobile */
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto; /* Ensure images scale proportionally */
+    display: block; /* Make sure images don't leave extra space below them */
+}
+
+/* ====================================
+   STYLE RULES FOR MOBILE VIEWPORT (Default)
+   ==================================== */
+
+/* Style rules to show mobile class and hide tab-desk class */
+.mobile {
+    display: block;
+}
+
+.tab-desk {
+    display: none; /* Hide desktop elements by default */
+}
+
+/* Style rules for header area */
+header {
+    background-color: #002D74; /* Aggie Blue */
+    color: #FDB827; /* Aggie Gold */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile h1 {
+    font-size: 1.5em;
+    font-family: 'Merriweather', sans-serif; /* Title font */
+}
+
+/* Style rules for navigation area */
+nav {
+    background-color: #002D74;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+/* Mobile: Nav links are full-width buttons that stack vertically */
+nav li {
+    background-color: #FDB827; /* Aggie Gold button background */
+    display: block;
+    font-size: 1.1em; /* Adjusted slightly for mobile links */
+    font-family: 'Merriweather', sans-serif;
+    font-weight: bold;
+    margin-bottom: 2px; /* Small space between stacked links */
+}
+
+nav li a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #002D74; /* Dark link text */
+}
+
+/* Style rules for main content (single column stack) */
+main {
+    background-color: #a5a8ac; /* Gray background from wireframe */
+    padding: 2%;
+    font-family: "Lora", serif;
+}
+
+/* Wireframe style for the yellow header boxes */
+.yellow-header {
+    background-color: #FDB827;
+    color: #002D74;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-family: 'Merriweather', sans-serif;
+    font-size: 1.3em;
+    text-align: left;
+}
+
+/* Gray boxes from the wireframe stack vertically by default */
+.focus-article, .article-card, .cve-item {
+    background-color: #d8d8d8; /* Light gray box color */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    text-align: left;
+}
+
+/* Style rules for footer content */
+footer {
+    text-align: center;
+    font-size: 1em;
+    background-color: #002D74;
+    color: #FDB827;
+    padding: 2% 0; /* Shorthand for top/bottom padding */
+}
+
+footer a {
+    color: #FDB827;
+    text-decoration: none;
+}
+
+
+/* ====================================
+   MEDIA QUERY for TABLET VIEWPORT
+   ==================================== */
+@media screen and (min-width: 620px), print {
+    
+    /* Navigation: Switch to a horizontal layout */
+    nav ul {
+        display: flex; /* Activate Flexbox */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav li {
+        display: inline;
+        font-size: 1em; /* Smaller links for more in the row */
+        margin: 0 5px; /* Space between links */
+        background-color: transparent; /* Remove button background */
+    }
+
+    nav li a {
+        padding: 8px 10px;
+        color: #FDB827; /* Gold links on blue nav bar */
+    }
+}
+
+
+/* ====================================
+   MEDIA QUERY for DESKTOP VIEWPORT
+   ==================================== */
+@media screen and (min-width: 1000px), print {
+    
+    #wrapper {
+        max-width: 1200px; /* Constrain content width */
+    }
+    
+    /* Desktop Viewport: Hide mobile class, show tab-desk class. */
+    .mobile {
+        display: none;
+    }
+
+    .tab-desk {
+        display: block;
+    }
+
+    /* Header/Navigation: Horizontal navigation is already set, now we can define the content grid */
+    
+    /* Main Content: CSS Grid Layouts */
+    main {
+        padding: 40px 20px;
+    }
+
+    /* Focus Article Section: 2-column Grid */
+    .article-focus-section {
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* e.g., Image (1 part) | Article (2 parts) */
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    /* Article Row: 3-column Grid for Cards */
+    .article-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    
+    /* CVE Section: 2-column Grid (1/2 heading, 1/2 list) */
+    .cve-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .cve-list {
+        display: flex;
+        flex-direction: column; /* Ensure items within the list stack */
+        justify-content: space-around;
+    }
+
+    .cve-item {
+        background-color: #002D74; /* Dark blue background for list items (as per wireframe style) */
+        color: white;
+        text-align: center;
+    }
+}
+
+
+/* ====================================
+   MEDIA QUERY for LARGE DESKTOP VIEWPORTS
+   ==================================== */
+@media screen and (min-width: 1921px), print {
+    /* If needed, you could increase max-width here for very large monitors */
+    #wrapper {
+        max-width: 1600px;
+    }
+}
+
+/* ====================================
+   MEDIA QUERY for PRINT
+   ==================================== */
+@media print {
+    /* Basic rules for printing */
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+
+    nav, footer, .mobile {
+        display: none; /* Do not print navigation or footer */
+    }
+}

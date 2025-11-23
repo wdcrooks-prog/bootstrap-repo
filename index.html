@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--Ch2 Lab3 characterset-->
+    <meta charset="utf-8">
+    <!--Ch5 Lab3 Create Meta viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--Ch11 Lab3 Will Crooks Update Page title for SEO best practices-->
+    <title>Cybersecurity News - Fraud Alerts | Aggies Cyber-Self-Defense</title>
+    
+    <!--CH11 Page Description Meta for search results summary-->
+    <meta name="description" content="Get Updates on current Cybersecurity threats, scams, and tools to stay safe online!">
+    
+    <!--Ch5 Lab3 Selected Custom Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    
+    <!--CH7 Lab3 Favicon link-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="images/android-chrome-192.png">
+
+    <!--CH12 Lab3 Bootstrap CDN for jumbotron, navbar, and grid system-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!--CH4 Lab 3 Create CSS styles.css file, minimum 12 style rules-->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--Ch12 Lab3 Custom CSS bootstrap styles file linked-->
+    <link rel="stylesheet" href="css/bootstrap_custom_styles.css">
+</head>
+
+<body class="container my-5">
+    <header class="p-5 mb-0 bg-light text-center rounded-3">
+        <div class="container-fluid py-2">
+            <h1 class="display-3 fw-bold">Aggie's Cyber-Self-Defense</h1>
+            <p class="lead col-md-8 mx-auto">Your Go-To Guide for Protecting Your Digital World</p>
+            <div class="hero mt-4">
+                <a href="index.html">
+                    <img src="images/orangebulldogoncomputer.png" class="container my-5" alt="Orange Cartoon Bulldog on computer">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!--CH12 Lab 3 Will Crooks Make NAV Mobile Viewport Content-->
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Navigation</a> 
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-links" aria-controls="mobile-links" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mobile-links">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bootstrap_cyber_hygiene.html">Cyber Hygiene</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bootstrap_scams_phish.html">Current Scams</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bootstrap_personal_data.html">Data Security</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bootstrap_personal_safety.html">Cyber-Safety</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bootstrap_about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bootstrap_contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid px-0">    
+        <div class="cve-item text-center p-2" style="cursor: pointer;" data-bs-toggle="collapse" data-bs-target="#fraud_ticker_content" aria-expanded="true" aria-controls="fraud_ticker_content">
+            <h3>Social Media Scam Alert (Click to Toggle)</h3>
+        </div>
+        
+        <div class="collapse show" id="fraud_ticker_content">
+            <div class="ratio ratio-21x9" style="max-height: 60px;">
+                 <iframe class="fraud_ticker" src="https://rss.app/embed/v1/ticker/ZgfQ5QaJwSQVlhla" frameborder="0"></iframe>    
+            </div>
+        </div>
+    </div>
+
+    <main class="container my-5">
+        
+        <h2 class="brand-header text-center mb-4">Your Go-To Guide for Protecting Your Digital World</h2>
+
+        <h3 class="brand-header">Article of the Day:</h3>
+        <section class="row article-focus-section my-3">
+            
+            <article class="col-md-4 mb-3">
+                <div class="focus-article p-3">
+                    <h1>Ghost Students!</h1>
+                    <figure class="mt-3">
+                        <img src="images/commcollegefakestudentsarticleclassimage.webp" alt="Group of students in large classroom" class="img-fluid"> 
+                        <figcaption class="content-box">Colleges have a new worry: ‘Ghost students’—AI powered fraud rings</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <div class="col-md-8 mb-3">
+                <div class="focus-article p-3 h-100 d-flex flex-column">
+                    <h4 class="brand-header mb-2">Focus Article Details</h4>
+                    <p class="content-box flex-grow-1">The “ghost-student” epidemic that has been attacking California’s community college system is infesting the nation, with colleges in Arizona, Indiana, Oregon, New Jersey, and Michigan working to defend their institutions from AI-powered fraud rings trying to blend in with legitimate students heading back to school.</p>
+                    <a target="_blank" href="https://fortune.com/2025/08/23/ghost-students-colleges-back-to-school/" class="btn btn-warning mt-2 align-self-start">Link to Article</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="article-row my-5">
+            <h2>Top Stories</h2>
+            
+            <div class="article-card mb-3" data-bs-toggle="collapse" data-bs-target="#article1_content" style="cursor: pointer;">Article 1: Phishing Tips</div>
+            <div class="collapse" id="article1_content">
+                <article class="content-box p-3">
+                    <iframe src="https://krebsonsecurity.com/2025/11/google-sues-to-disrupt-chinese-sms-phishing-triad/" title="Krebs article on chinese phishing" class="ratio ratio-16x9"></iframe>
+                </article>
+            </div>
+            
+            <div class="article-card mb-3" data-bs-toggle="collapse" data-bs-target="#article2_content" style="cursor: pointer;">Article 2: Useful Tool of the week: Free Bitwarden Password Managers</div>
+            <div class="collapse" id="article2_content">
+                <article class="content-box p-3"> 
+                    <iframe src="https://www.youtube.com/embed/SSLGa0LjTrA?si=ZVg4gflos9x3a8np" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="ratio ratio-16x9"></iframe>
+                </article>
+            </div>
+
+            <div class="article-card mb-3" data-bs-toggle="collapse" data-bs-target="#article3_content" style="cursor: pointer;">Article 3: Actually Good Passwords</div>
+            <div class="collapse" id="article3_content">
+                <article class="content-box p-3">
+                    <a href="https://saropa-contacts.medium.com/size-matters-xkcd-was-right-and-the-2025-password-table-again-proves-it-6c80f4bb3e18" title="Password Brute Force Table" class="link-dark d-block">
+                        <h2 class="brand-header">XKCD Was Right and The 2025 Password Table Again Proves It</h2>
+                    </a>
+                    <p class="content-box">How simpler random passphrases are harder to crack than randommized complicated passwords</p> 
+                    <img src="images/pwbruteforcetable.png" class="img-fluid" alt="Password Brute Force Table"> 
+                </article>
+            </div>
+        </section>
+        
+        <section class="row cve-section my-5">
+            <div class="col-md-6 mb-3">
+                <h3 class="brand-header" data-bs-toggle="collapse" data-bs-target="#cve_high_content" style="cursor: pointer;">Critical Vulnerabilities and Scams</h3>
+                <div class="collapse show" id="cve_high_content">
+                    <div class="cve-list p-2">
+                        <iframe src="https://rss.app/embed/v1/list/CPHXwZXPecmoow5X" frameborder="0" class="ratio ratio-1x1" style="height: 400px;"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-3">
+                <h3 class="brand-header" data-bs-toggle="collapse" data-bs-target="#windows_hardening_content" style="cursor: pointer;">Windows Hardening Step-By-Step Guide</h3>
+                <div class="collapse show" id="windows_hardening_content">
+                    <div class="p-2">
+                        <iframe src="media/PROTECT - Hardening Microsoft Windows 10 and Windows 11 Workstations (July 2024).pdf" frameborder="0" class="ratio ratio-1x1" style="height: 400px;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="bg-dark text-white text-center py-4 mt-auto">
+            <div class="container">
+                <div class="copyright mb-3">
+                    <p>&copy; Copyright 2025. All Rights Reserved.</p>
+                    <p class="mb-0"><a href="mailto:contact@email.com" class="text-warning text-decoration-underline">contact@email.com</a></p>
+                </div>
+
+                <div class="social">
+                    <p>Please visit our socials!</p>
+                    <div class="social_img">
+                        <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook logo"></a>
+                        <a href="https://www.twitter.com" target="_blank"><img src="images/x_twitter.png" alt="Twitter logo"></a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script src="scripts/script.js"></script>
+</body>
+</html>
