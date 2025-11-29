@@ -42,7 +42,7 @@
 
 
 <body class="container my-5">
-    <header class="p-5 mb-0 bg-light text-center rounded-3">
+    <header class="jumbotron jumbotron-fluid text-center">
         <div class="container-fluid py-2">
             <h1 class="display-3 fw-bold">Aggie's Cyber-Self-Defense</h1>
             <p class="lead col-md-8 mx-auto">Your Go-To Guide for Protecting Your Digital World</p>
@@ -88,81 +88,94 @@
         </div>
     </div>
 
-    <main class="container my-5">
-        
-        <h2 class="brand-header text-center mb-4">Your Go-To Guide for Protecting Your Digital World</h2>
+    <main>
 
-        <h3 class="brand-header">Article of the Day:</h3>
-        <section class="row article-focus-section my-3">
+            <!--Ch3 Lab3  <MAIN> Content should have  <H1>, <p>, <img>, <ul>/<li> list-->
             
-            <article class="col-md-4 mb-3">
-                <div class="focus-article p-3">
-                    <h1>Ghost Students!</h1>
-                    <figure class="mt-3">
-                        <img src="images/commcollegefakestudentsarticleclassimage.webp" alt="Group of students in large classroom" class="img-fluid"> 
-                        <figcaption class="content-box">Colleges have a new worry: ‘Ghost students’—AI powered fraud rings</figcaption>
-                    </figure>
-                </div>
-            </article>
 
-            <div class="col-md-8 mb-3">
-                <div class="focus-article p-3 h-100 d-flex flex-column">
-                    <h4 class="brand-header mb-2">Focus Article Details</h4>
-                    <p class="content-box flex-grow-1">The “ghost-student” epidemic that has been attacking California’s community college system is infesting the nation, with colleges in Arizona, Indiana, Oregon, New Jersey, and Michigan working to defend their institutions from AI-powered fraud rings trying to blend in with legitimate students heading back to school.</p>
-                    <a target="_blank" href="https://fortune.com/2025/08/23/ghost-students-colleges-back-to-school/" class="btn btn-warning mt-2 align-self-start">Link to Article</a>
+             <h3 style="text-align: center;">Report a Suspicious Message</h3>
+                <p id="form-help">Use this form to report phishing, quishing, job scams, or other suspicious activity.</p>
+            
+             <!--Ch 8 Lab3 Report a Scam Form Elements Jordan Banks -->
+            <form class="report-form" action="#" method="post" aria-describedby="form-help">
+                <!-- Name (required) -->
+                <div class="form-field">
+                <label for="name">Full Name <span aria-hidden="true">*</span></label>
+                <input id="name" name="name" type="text" placeholder="First Last" required>
                 </div>
-            </div>
-        </section>
-        
-        <section class="article-row my-5">
-            <h2>Top Stories</h2>
-            
-            <div class="article-card mb-3" data-bs-toggle="collapse" data-bs-target="#article1_content" style="cursor: pointer;">Article 1: Phishing Tips</div>
-            <div class="collapse" id="article1_content">
-                <article class="content-box p-3">
-                    <iframe src="https://krebsonsecurity.com/2025/11/google-sues-to-disrupt-chinese-sms-phishing-triad/" title="Krebs article on chinese phishing" class="ratio ratio-16x9"></iframe>
-                </article>
-            </div>
-            
-            <div class="article-card mb-3" data-bs-toggle="collapse" data-bs-target="#article2_content" style="cursor: pointer;">Article 2: Useful Tool of the week: Free Bitwarden Password Managers</div>
-            <div class="collapse" id="article2_content">
-                <article class="content-box p-3"> 
-                    <iframe src="https://www.youtube.com/embed/SSLGa0LjTrA?si=ZVg4gflos9x3a8np" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="ratio ratio-16x9"></iframe>
-                </article>
-            </div>
 
-            <div class="article-card mb-3" data-bs-toggle="collapse" data-bs-target="#article3_content" style="cursor: pointer;">Article 3: Actually Good Passwords</div>
-            <div class="collapse" id="article3_content">
-                <article class="content-box p-3">
-                    <a href="https://saropa-contacts.medium.com/size-matters-xkcd-was-right-and-the-2025-password-table-again-proves-it-6c80f4bb3e18" title="Password Brute Force Table" class="link-dark d-block">
-                        <h2 class="brand-header">XKCD Was Right and The 2025 Password Table Again Proves It</h2>
-                    </a>
-                    <p class="content-box">How simpler random passphrases are harder to crack than randommized complicated passwords</p> 
-                    <img src="images/pwbruteforcetable.png" class="img-fluid" alt="Password Brute Force Table"> 
-                </article>
-            </div>
-        </section>
-        
-        <section class="row cve-section my-5">
-            <div class="col-md-6 mb-3">
-                <h3 class="brand-header" data-bs-toggle="collapse" data-bs-target="#cve_high_content" style="cursor: pointer;">Critical Vulnerabilities and Scams</h3>
-                <div class="collapse show" id="cve_high_content">
-                    <div class="cve-list p-2">
-                        <iframe src="https://rss.app/embed/v1/list/CPHXwZXPecmoow5X" frameborder="0" class="ratio ratio-1x1" style="height: 400px;"></iframe>
-                    </div>
+                <!-- Email (required) -->
+                <div class="form-field">
+                <label for="email">University Email <span aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" placeholder="you@school.edu" required>
                 </div>
-            </div>
-            
-            <div class="col-md-6 mb-3">
-                <h3 class="brand-header" data-bs-toggle="collapse" data-bs-target="#windows_hardening_content" style="cursor: pointer;">Windows Hardening Step-By-Step Guide</h3>
-                <div class="collapse show" id="windows_hardening_content">
-                    <div class="p-2">
-                        <iframe src="media/PROTECT - Hardening Microsoft Windows 10 and Windows 11 Workstations (July 2024).pdf" frameborder="0" class="ratio ratio-1x1" style="height: 400px;"></iframe>
-                    </div>
+
+                <!-- Role (select) -->
+                <div class="form-field">
+                <label for="role">Your Role</label>
+                <select id="role" name="role">
+                    <option value="">Choose one</option>
+                    <option>Student</option>
+                    <option>Faculty</option>
+                    <option>Staff</option>
+                    <option>Alumni</option>
+                    <option>Visitor</option>
+                </select>
                 </div>
-            </div>
-        </section>
-    </main>
+
+                <!-- Incident date (date input) -->
+                <div class="form-field">
+                <label for="date">Incident Date</label>
+                <input id="date" name="date" type="date">
+                </div>
+
+                <!-- Channel (radio) -->
+                <fieldset class="form-field">
+                <legend>Channel</legend>
+                <label><input type="radio" name="channel" value="email"> Email</label>
+                <label><input type="radio" name="channel" value="sms"> SMS/Text</label>
+                <label><input type="radio" name="channel" value="qr"> QR Code</label>
+                <label><input type="radio" name="channel" value="social"> Social Media</label>
+                </fieldset>
+
+                <!-- Suspicious URL (url input) -->
+                <div class="form-field">
+                <label for="url">Suspicious URL (if any)</label>
+                <input id="url" name="url" type="url" placeholder="https://example.com">
+                </div>
+
+                <!-- Attachment (file upload) — extra element not used before -->
+                <div class="form-field">
+                <label for="attachment">Attach Screenshot/Email (optional)</label>
+                <input id="attachment" name="attachment" type="file" accept=".png,.jpg,.jpeg,.pdf,.eml">
+                </div>
+
+                <!-- Details (textarea) -->
+                <div class="form-field form-field--full">
+                <label for="details">Details</label>
+                <textarea id="details" name="details" rows="6" placeholder="Describe what happened..."></textarea>
+                </div>
+
+                <!-- Consent (required checkbox) -->
+                <div class="form-field">
+                <label>
+                    <input type="checkbox" name="consent" required>
+                    I confirm this report is accurate to the best of my knowledge.
+                </label>
+                </div>
+
+                <!-- Submit -->
+                <div class="form-actions">
+                <button type="submit" class="btn">Submit Report</button>
+                </div>
+            </form>
+
+
+           
+
+
+           
+        </main>
     
     <footer>
         <div class="bg-dark text-white text-center py-4 mt-auto">

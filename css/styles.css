@@ -195,3 +195,191 @@ footer a:hover {
         display: none;
     }
 }
+
+/* 
+    Ch8 Lab 3 Jordan Banks Table Style Rules for Scam web page
+   TABLE STYLES (Scam Matrix)
+   - Desktop/tablet: show full table
+   - Mobile: hide table, show .scam-table-alt 
+*/
+
+.table-wrap {
+  margin: 1rem 0;
+}
+
+/* Base table */
+.scam-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 2px solid #0b0c0c;
+  border-radius: 12px;            /* rounded corner for wrapper effect */
+  overflow: hidden;               /* clip radius */
+  font-family: "Merriweather", Georgia, serif;
+}
+.scam-table caption {
+  padding: .75rem;
+  text-align: left;
+  font-weight: 700;
+}
+.scam-table thead th {
+  background: #002D74;
+  color: #fff;
+  padding: .75rem;
+  text-align: left;
+}
+.scam-table th[scope="col"][colspan] {
+  text-align: center;
+  font-size: 1.1rem;
+}
+.scam-table th,
+.scam-table td {
+  padding: .75rem;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+.scam-table tbody tr:nth-child(even) {
+  background: #f8f9fa;          
+}
+
+/* Alternate mobile summary list (hidden by default on desktop) */
+.scam-table-alt {
+  display: none;
+  margin-top: 1rem;
+}
+.scam-table-alt h2 {
+  font-family: "Lora", Georgia, serif;
+  margin-bottom: .5rem;
+}
+.alt-cards {
+  list-style: none;
+  display: grid;
+  gap: .75rem;
+  padding: 0;
+}
+.alt-cards li {
+  background: #ffffff;
+  border: 2px solid #0b0c0c;
+  border-radius: 12px;
+  padding: .75rem;
+}
+
+/* CH5 Lab3 Joradn Mobile behavior: hide table, show alt list */
+@media (max-width: 767px) {
+  .scam-table { display: none; }
+  .scam-table-alt { display: block; }
+}
+
+/*
+   FORM STYLES (Report a Scam)
+   - Mobile-first layout
+   - Tablet/Desktop grid enhancements
+*/
+
+.report-form {
+  display: grid;
+  gap: .85rem;
+  background: #f8f9fa;
+  border: 2px solid #0b0c0c;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.form-field {
+  display: grid;
+  gap: .4rem;
+  text-align: left;
+}
+.form-field--full {
+  grid-column: 1 / -1;            
+}
+
+.report-form label,
+.report-form legend {
+  font-weight: 700;
+  font-family: "Merriweather", Georgia, serif;
+}
+
+.report-form input[type="text"],
+.report-form input[type="email"],
+.report-form input[type="url"],
+.report-form input[type="date"],
+.report-form input[type="file"],
+.report-form select,
+.report-form textarea {
+  width: 100%;
+  padding: .6rem .7rem;
+  border: 2px solid #0b0c0c;
+  border-radius: 10px;
+  font: inherit;
+  background: #fff;
+}
+
+.report-form input:focus,
+.report-form select:focus,
+.report-form textarea:focus {
+  outline: 3px solid #FDB827;
+  outline-offset: 2px;
+}
+
+.form-actions {
+  margin-top: .25rem;
+  text-align: left;
+}
+
+/* Reuse your .btn styles; ensure visibility on all backgrounds */
+.btn {
+  display: inline-block;
+  padding: .6rem 1rem;
+  border-radius: .75rem;
+  background: #003078;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus-visible {
+  background: #1a4fb3;
+}
+
+/* CH5 Lab3 Jordan Tablet+: arrange fields in two columns */
+@media (min-width: 768px) {
+  .report-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .form-actions { grid-column: 1 / -1; }
+}
+
+/* CH5 Lab3 Jordan Desktop: a little more breathing room */
+@media (min-width: 1000px) {
+  .report-form {
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+
+
+
+
+
+/* Media Query for Large Desktop Viewports */
+/*CH5 Lab3 Jordan Add Media Queries*/
+@media screen and (min-width: 1921px), print {
+    #wrapper {
+        max-width: 1600px;
+    }
+}
+
+/* Media Query for Print */
+@media print {
+  body {
+        background-color: #fff;
+        color: #000;
+    }
+
+
+
+
+}

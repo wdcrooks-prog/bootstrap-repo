@@ -1,0 +1,10 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+Disallow /template.html
+Disallow /inex_test.html
+
+
+Sitemap: https://wdcrooks-prog.github.io/bootstrap-repoe/sitemap.html

@@ -42,7 +42,7 @@
 
 
 <body class="container my-5">
-    <header class="p-5 mb-0 bg-light text-center rounded-3">
+    <header class="jumbotron jumbotron-fluid text-center">
         <div class="container-fluid py-2">
             <h1 class="display-3 fw-bold">Aggie's Cyber-Self-Defense</h1>
             <p class="lead col-md-8 mx-auto">Your Go-To Guide for Protecting Your Digital World</p>
@@ -89,6 +89,139 @@
     </div>
 
     <main class="container my-5">
+
+        <!-- Begin Main Content -->
+
+        <main>
+            <!--Ch3 Lab3  <MAIN> Content should have  <H1>, <p>, <img>, <ul>/<li> list-->
+            
+            
+
+            <!--Ch7 Lab3 Dawn Graves Integrate Article and Section and Aside Elements-->
+            <div class="Law-Enforcement-Contacts">
+                <!-- New section title that will span both grid columns -->
+                <div>
+                    <h2 class="yellow-header" cursor="pointer">Your Sources for Help in a Cyber Emergency</h2>
+                        <a href="https://www.ic3.gov/CSA" target="_blank"><img src="images/IC3 image.webp" frameborder="0"></a></li>
+                        <a href="https://www.cisa.gov/" target="_blank"><img src="images/CISA Logo.png" frameborder="0"></a></li>
+                    
+                </div>
+            </div>
+
+            
+
+
+            <!-- TABLE: 5+ columns, 6+ rows; includes colspan + rowspan -->
+            <div class="table-wrap">
+                <table class="scam-table" aria-describedby="scamTableDesc">
+                <caption id="scamTableDesc" class="visually-hidden">
+                    Matrix of common scams with channels, red flags, typical bait, and recommended actions.
+                </caption>
+                <thead>
+                    <tr>
+                    <th scope="col" colspan="5">Campus &amp; Online Scams — Quick Reference</th> <!-- colspan --> 
+                    </tr>
+                    <tr>
+                    <th scope="col">Scam Type</th>
+                    <th scope="col">Channel</th>
+                    <th scope="col">Key Red Flags</th>
+                    <th scope="col">Typical Bait</th>
+                    <th scope="col">What To Do</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <th scope="row" rowspan="2">Phishing</th> <!-- rowspan -->
+                    <td>Email</td>
+                    <td>Urgent tone, mismatched domain, attachments</td>
+                    <td>“Reset your password”/“Account suspended”</td>
+                    <td>Verify sender; don’t click; report to IT/Sec</td>
+                    </tr>
+                    <tr>
+                    <td>SMS</td>
+                    <td>Short links, asks for MFA code</td>
+                    <td>“Package delivery failed” or bank alerts</td>
+                    <td>Open app directly; never share codes</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Quishing</th>
+                    <td>QR Code</td>
+                    <td>Random flyers, taped codes, free giveaways</td>
+                    <td>“Free gift card” / “Event entry”</td>
+                    <td>Type the URL; avoid unknown codes</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Job Scam</th>
+                    <td>Email/Social</td>
+                    <td>Upfront payment requests, gift cards</td>
+                    <td>“Easy remote job, $500/week”</td>
+                    <td>Use career portal; never prepay equipment</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Tech Support</th>
+                    <td>Pop-up/Call</td>
+                    <td>Scary warnings, phone number to call</td>
+                    <td>“Virus detected—call now”</td>
+                    <td>Close tab; contact official support</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Marketplace Fraud</th>
+                    <td>DM/Payment App</td>
+                    <td>Off-platform payments, overpayment</td>
+                    <td>“I’ll pay extra—send me the balance”</td>
+                    <td>Use campus meetups; official payment escrow</td>
+                    </tr>
+                </tbody>
+                </table>
+
+                <!-- ALT LIST for mobile (shown when table is hidden on small screens) -->
+                <div class="scam-table-alt">
+                <h2>Common Scams (Mobile Summary)</h2>
+                <ul class="alt-cards">
+                    <li>
+                    <strong>Phishing (Email/SMS)</strong>
+                    <p><em>Flags:</em> urgency, domain mismatch, asks for MFA.</p>
+                    <p><em>Do:</em> verify sender, don’t click, report.</p>
+                    </li>
+                    <li>
+                    <strong>Quishing (QR Code)</strong>
+                    <p><em>Flags:</em> random flyers, free giveaways.</p>
+                    <p><em>Do:</em> type the URL manually.</p>
+                    </li>
+                    <li>
+                    <strong>Job Scam</strong>
+                    <p><em>Flags:</em> gift cards, prepayment.</p>
+                    <p><em>Do:</em> check career portal only.</p>
+                    </li>
+                    <li>
+                    <strong>Tech Support</strong>
+                    <p><em>Flags:</em> scary popups, call this number.</p>
+                    <p><em>Do:</em> close tab, contact official support.</p>
+                    </li>
+                    <li>
+                    <strong>Marketplace Fraud</strong>
+                    <p><em>Flags:</em> off-platform pay, overpayment.</p>
+                    <p><em>Do:</em> meet safely, use escrow.</p>
+                    </li>
+                </ul>
+                </div>
+            </div>
+
+         <h3 style="padding-top: 2%;">Here is an example audio of a Phishing Phone scam, a pre-recorded fake "IRS" scam to extor money</h3>
+            <audio controls style="width: 100%; padding-bottom: 1%;">
+                <source src="media/audio/Fake IRS Scam Recording - Courier Video.mp3" type="audio/mp3">
+                <source src="media/audio/Fake IRS Scam Recording - Courier Video.ogg" type="audio/ogg">
+                <track default kind="captions" label="captions" srclang="en" src="media/Fake IRS Scam Recording - Courier Video.vtt" />
+                <p>Your Browser Does not Support the Audio Element</p>
+            </audio>
+
+            <video width="150%" height="125%" controls="controls" poster="images/new scams 2025 poster image.jpg">
+                    <source src="media/video/New Scams to Watch Out For in 2025 - ThioJoe (240p, h264).mp4"video/mp4">
+                    <source src="media/video/cyber_hygiene_intro_video.ogg" type="video/ogg">
+                    <track src="media/cyber_hygiene_captions.vtt" kind="captions" srclang="en" label="English">
+                    <track src="media/cyber_hygiene_desciptions.vtt" kind="descriptions" srclang="en" label="English">
+                    <p>Your Browser Does not Support the Audio Element</p>
+            </video>
     
             <!--Ch3 Lab3  <MAIN> Content should have  <H1>, <p>, <img>, <ul>/<li> list-->
 
@@ -141,7 +274,7 @@
             
 
             
-        </main>    
+    </main>  
         
     
     <footer>
